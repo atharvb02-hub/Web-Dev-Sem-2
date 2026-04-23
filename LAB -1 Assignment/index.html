@@ -1,0 +1,63 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- left box -->
+        <div id="leftbox">
+            <form action="" id="inputform" onsubmit="submitHandler(event)">
+                <label>Title</label>
+                <input type="text" name="title"/>
+
+                <label >Date</label>
+                <input type="date" name="date">
+                
+                <label>Category</label>
+                <select name="category">
+                    <option >Meetup</option>
+                    <option>Social</option>
+                    <option>Contest</option>
+                    <option>Hackthon</option>
+                </select>
+
+                <label >description</label>
+                <textarea name="description"></textarea>
+
+                <button type="submit">Add Event</button>
+
+            
+
+            </form>
+        </div>
+        
+        <!--right box-->
+        <div id="rightbox">
+            <h1>My Event</h1>
+            
+            <DIV id="list">
+                <div class="eachcard">
+                    <p>Title</p>
+                    <p>12/9/26</p>
+                    <p>Social</p>
+                    <p>Description</p>
+                    <span id="crossbtn">&#10005</span>
+                </div>
+
+
+
+            </DIV>
+        </div>
+        </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

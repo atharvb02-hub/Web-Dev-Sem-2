@@ -1,0 +1,240 @@
+/* 
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header h1 { text-align: center; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+#wrapper{
+    display:flex;
+    border: 2px solid black;
+    padding: 30px;
+    gap: 30px;
+
+}
+
+
+#inputform{
+    display: flex;
+    gap: 10px;
+    
+   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+
+}
+
+
+.eachcard{
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    padding: 10px;
+
+}
+
+#leftbox{width:30%;
+         border: 2px solid black;
+         height: 300px;
+        }
+
+
+
+#rightbox{width:70%;
+          padding: 20px;
+          border: 2px solid black;
+        }
+
+
+#crossbtn{
+    position:absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer; 
+    border: none; 
+    border-radius: 6px;
+
+
+}
+
+#list{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    gap: 10px;
+    overflow: auto;
+
+
+} */
+
+
+
+
+
+/* General Reset & Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    margin: 0;
+    padding: 40px 20px;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Main Container */
+#wrapper {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7); /* See-through glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Form Styling (Left Box) */
+#leftbox {
+    width: 35%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+#inputform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#inputform label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: -10px;
+}
+
+#inputform input, 
+#inputform select, 
+#inputform textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#inputform input:focus, 
+#inputform textarea:focus {
+    border-color: #a1c4fd;
+}
+
+#inputform button {
+    background: #4facfe;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+#inputform button:hover {
+    background: #008eff;
+    transform: translateY(-2px);
+}
+
+/* Events Display (Right Box) */
+#rightbox {
+    width: 65%;
+}
+
+#rightbox h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #4facfe;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+#list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: flex-start;
+}
+
+/* Individual Card Styling */
+.eachcard {
+    background: white;
+    border-radius: 12px;
+    width: calc(50% - 10px); /* Two cards per row */
+    min-height: 120px;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: hover 0.3s;
+    border-left: 5px solid #4facfe; /* Blue accent line */
+}
+
+.eachcard:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.eachcard p:first-child {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.eachcard p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+/* Delete Button */
+#crossbtn {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+#crossbtn:hover {
+    color: #ff4d4d;
+}
